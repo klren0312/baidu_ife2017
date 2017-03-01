@@ -35,27 +35,27 @@ nav a:visited{color: #fff;}
 nav a:hover{color:gray;}
 
 /*文章块*/
-section{
+article{
 	background: white;
 	box-shadow: 5px 5px 5px #888888;
 	border-radius: 25px 25px;
 }
 
-section header h3, section header p{
+article header h3, article header p{
 	color: gray;
 }
 
-article{
+article header{
 	margin-left: 10px;
 }
 /*图片*/
-section blockquote div{
+article blockquote div{
 	box-shadow: 2px 2px 2px gray;
 	width: 200px;
 	height: 200px;
 	border: 1px;
 }
-section blockquote img{
+article blockquote img{
 	width: 100px;
 	height: 100px;
 }
@@ -87,6 +87,12 @@ article tr:nth-child(even){
 
 
 /*侧边栏表单*/
+section{
+	background-color: white;
+}
+section header {
+	margin-left: 10px;
+}
 #form{
 	 
 	margin-left: 30%;
@@ -105,6 +111,11 @@ article tr:nth-child(even){
 }
 #personbox{
 	margin-left: 45px;
+}
+
+section textarea{
+	width: 50%;
+	height: 50%;
 }
 
 section button{
