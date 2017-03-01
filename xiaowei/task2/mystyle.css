@@ -21,6 +21,7 @@ nav header{
 	float: left;
 	color: white;
 	margin-top: 1%;
+
 }
 nav li{
 	float: right;
@@ -37,12 +38,16 @@ nav a:hover{color:gray;}
 section{
 	background: white;
 	box-shadow: 5px 5px 5px #888888;
+	border-radius: 25px 25px;
 }
 
 section header h3, section header p{
 	color: gray;
 }
 
+article{
+	margin-left: 10px;
+}
 /*图片*/
 section blockquote div{
 	box-shadow: 2px 2px 2px gray;
