@@ -1,0 +1,121 @@
+body{
+	background: #DEDEDE;
+	font-family: "微软雅黑";
+}
+
+/*链接样式*/
+a{
+	text-decoration: none;
+}
+
+
+/*导航*/
+nav{
+	background: black;
+	height: 50px;
+}
+nav ul{
+	list-style-type: none;
+}
+nav header{
+	float: left;
+	color: white;
+	margin-top: 1%;
+}
+nav li{
+	float: right;
+	color: white;
+	margin-right: 5px;
+	margin-top: 1%;
+}
+nav a:link{color: white;}
+nav a:active{color: yellow;}
+nav a:visited{color: #fff;}
+nav a:hover{color:gray;}
+
+/*文章块*/
+section{
+	background: white;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+section header h3, section header p{
+	color: gray;
+}
+
+/*图片*/
+section blockquote div{
+	box-shadow: 2px 2px 2px gray;
+	width: 200px;
+	height: 200px;
+	border: 1px;
+}
+section blockquote img{
+	width: 100px;
+	height: 100px;
+}
+
+/*最后一篇文章块*/
+#last{
+	list-style-type: decimal;
+}
+article table,article td,article th{
+	border: 1px solid #ddd;
+	text-align: left;
+}
+article table{
+	width: 90%;
+	height: 100%;
+	border-collapse: collapse;
+}
+article th{
+	background-color: #000;
+	color: white;
+}
+article tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+#total{
+	background-color: gray;
+}
+
+
+/*侧边栏表单*/
+#form{
+	 
+	margin-left: 30%;
+}
+
+#message1,#message2{
+	color: gray;
+	margin-left:118px;
+}
+#password{
+	margin-left: 32px;
+	margin-bottom: 10px;
+}
+#sexbox,#citybox,#interestbox{
+	margin-left:78px;
+}
+#personbox{
+	margin-left: 45px;
+}
+
+section button{
+	border-radius: 30px 30px;
+	background-color: #3355D0;
+	color: white;
+	width: 100%;
+	height: 50px;
+}
+
+/*页脚*/
+footer{
+	background-color: black;
+	height: 40px;
+	color: white;
+}
+footer p{
+	text-align: center;
+}
