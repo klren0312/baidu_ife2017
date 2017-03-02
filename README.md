@@ -16,9 +16,9 @@
 >这次练习让我又重新学习了css样式。
 
 1. 学习了a标签的相关样式
->
+
 ```
- /*a去掉下划线*/
+/*a去掉下划线*/
  a{
  	text-decoration:none;
  }
@@ -31,10 +31,20 @@
 ```
 
 2.列表相关样式
->
+
 ```
  list-style-type: none;/*前面没有标志*/
  list-style-type: decimal;/*前面是数字*/
 ```
 
 3.box-shadow增加阴影
+
+
+###task3
+>这次练习让我学习了postion定位和float布局。还是要多加练习，加深理解。
+
+1.box-sizing
+2.padding
+3.position
+4.float
+5.overflow
