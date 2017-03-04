@@ -131,7 +131,9 @@ aside{
 }
 section header {
 	margin-left: 10px;
+    box-shadow: -2px 0 0 0 #A7A7A7;
 }
+
 #form{
 
 	margin-left: 10%;
