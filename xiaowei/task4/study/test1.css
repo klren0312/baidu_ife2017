@@ -1,0 +1,16 @@
+.box-set{
+	background: grey;
+	overflow: auto;
+}
+
+.box{
+	background: red;
+	height: 100px;
+	width: 200px;
+	float: left;
+	margin: 10px;
+	border-radius: 20px 20px;
+	text-align: center;
+	box-shadow: 20px 20px 20px orange;
+}
+

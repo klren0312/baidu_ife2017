@@ -1,0 +1,25 @@
+.box-set:before,.box-set:after{
+	content: "";
+	display: table;
+}
+
+.box-set:after{
+	clear:both;
+}
+
+.box-set{
+	*zoom:1;
+	background: grey;
+
+}
+
+.box{
+	text-align: center;
+	height: 120px;
+	width: 100px;
+	background: red;
+	border-radius: 20px 20px;
+	box-shadow: 20px 20px 20px orange;
+	float: left;
+	margin: 20px;
+}
