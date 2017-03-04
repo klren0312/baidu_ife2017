@@ -1,0 +1,27 @@
+.container{
+	background: #ccc;
+	height: 200px;
+	width: 400px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -100px 0 0 -200px;
+}
+
+#left,#right{
+	background: #fc0;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+}
+
+#left{
+	top: 0;
+	left: 0;
+}
+
+#right{
+	bottom: 0;
+	right: 0;
+
+}
