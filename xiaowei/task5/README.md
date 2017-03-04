@@ -1,0 +1,19 @@
+#task5
+>运用了前面的清除浮动技术，解决了十张图片的那里的问题。以及页脚撑在最底下的问题。
+
+1.清除浮动
+>1.overflow
+`overflow:auto;`
+>2.clearfix
+```
+.group:before,.group:after{
+	display:table;
+	content:"";
+}
+.group:after{
+	clear:both;
+}
+.group{
+	*zoom:1;/*ie的属性*/
+}
+```
