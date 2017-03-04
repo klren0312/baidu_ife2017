@@ -57,6 +57,11 @@ article header h3, article header p{
 article header{
 	margin-left: 10px;
 }
+
+.arimg{
+	width: 50%;
+	height: 200px;
+}
 /*图片*/
 .group:before,.group:after{
 	content: "";
