@@ -13,15 +13,18 @@
 	height: 50px;
 	width: 50px;
 	position: absolute;
+
 }
 
 #left{
 	top: 0;
 	left: 0;
+	border-radius: 0 0 100% 0 ;
 }
 
 #right{
 	bottom: 0;
 	right: 0;
+	border-radius:100%  0 0  0 ;
 
 }
