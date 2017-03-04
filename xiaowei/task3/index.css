@@ -3,10 +3,11 @@ body{
 	padding: 20px;
 }
 
-aside,article,main{
+main,aside,article{
 	box-sizing: border-box;
 	border:1px solid #999;
 }
+
 main{
 	padding:20px 160px 20px 240px;
 	background: #eee;
