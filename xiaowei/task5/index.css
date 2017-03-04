@@ -1,0 +1,170 @@
+body{
+	background: #DEDEDE;
+	font-family: "微软雅黑";
+	margin: 0;
+	padding: 0;
+}
+
+
+/*链接样式*/
+a{
+	text-decoration: none;
+}
+
+
+/*导航*/
+nav{
+	background: black;
+	height: 50px;
+	width: 100%;
+	margin-top: -20px;
+}
+nav ul{
+	list-style-type: none;
+}
+nav header{
+	float: left;
+	color: white;
+	margin-top: 1%;
+
+}
+nav li{
+	float: right;
+	color: white;
+	margin-right: 5px;
+	margin-top: 1%;
+}
+nav a:link{color: white;}
+nav a:active{color: yellow;}
+nav a:visited{color: #fff;}
+nav a:hover{color:gray;}
+
+
+
+/*文章块*/
+article,aside{
+	background: white;
+	box-shadow: 5px 5px 5px #888888;
+	border-radius: 25px 25px;
+}
+
+article header h3, article header p{
+	color: gray;
+}
+
+article header{
+	margin-left: 10px;
+}
+/*图片*/
+.group:before,.group:after{
+	content: "";
+	display: table;
+
+}
+.group:after{
+	clear: both;
+}
+.group{
+	*zoom:1;
+ 	padding: 20px;
+ 	margin-top: 20px;
+}
+.image{
+	float: left;
+	height: 140px;
+	width: 140px;
+	border:1px;
+	box-shadow: 2px 2px 2px #888;
+	float: left;
+	text-align: center;
+}
+
+.image img{
+	width: 80px;
+	height: 80px;
+}
+
+
+
+/*最后一篇文章块*/
+#last{
+	list-style-type: decimal;
+}
+article table,article td,article th{
+	border: 1px solid #ddd;
+	text-align: left;
+}
+article table{
+	width: 90%;
+	height: 100%;
+	border-collapse: collapse;
+}
+article th{
+	background-color: #000;
+	color: white;
+}
+article tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+#total{
+	background-color: gray;
+}
+
+
+/*侧边栏表单*/
+main{
+	width: 60%;
+	float: left;
+	padding:0 20px 20px 20px;
+}
+aside{
+	float: left;
+	margin: 20px 0 0 20px;
+	width: 400px;
+}
+section header {
+	margin-left: 10px;
+}
+#form{
+
+	margin-left: 10%;
+}
+
+#message1,#message2{
+	color: gray;
+	margin-left:118px;
+}
+#password{
+	margin-left: 32px;
+	margin-bottom: 10px;
+}
+#sexbox,#citybox,#interestbox{
+	margin-left:78px;
+}
+#personbox{
+	margin-left: 45px;
+}
+
+section textarea{
+	width: 50%;
+	height: 50%;
+}
+
+section button{
+	border-radius: 10px 10px;
+	background-color: #3355D0;
+	color: white;
+	width: 100%;
+	height: 50px;
+}
+
+/*页脚*/
+footer{
+	background-color: black;
+	height: 40px;
+	width: 100%;
+	color: white;
+	text-align: center;
+	clear:both; 
+}
