@@ -7,6 +7,13 @@
   * [task4-20170304](#task4)
   * [task5-20170304](#task5)
   * [task6-20170305](#task6)
+* [斌斌学院](#斌斌学院)
+  * [task1-20170228](#task1)
+  * [task2-20170301](#task2)
+  * [task3-20170302](#task3)
+  * [task4-20170304](#task4)
+  * [task5-20170304](#task5)
+  * [task6-20170305](#task6)
 
 ***
 
@@ -145,3 +152,18 @@ p:first-letter{
 
 6.左右居中
 `margin:auto`
+
+
+##斌斌学院
+
+###task1
+>复习了简单的dom操作
+
+1.通过id获取对象
+`document.getElementById()`
+
+2.获取表单数据
+`document.getElementById().value`
+
+3.给标签内赋值
+`document.getElementById().innerHTML`
