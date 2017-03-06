@@ -22,3 +22,5 @@ function sortArray(a,b){
 }
 ```
 
+6.数字转中文
+`test.toLocaleString('zh-Hans-CN-u-nu-hanidec')`
