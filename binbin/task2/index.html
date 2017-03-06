@@ -46,7 +46,8 @@ var aqiData = [
     var li = document.createElement("li");
     if (key[1]>60) {
       test++;
-      li.innerHTML = "<h4>第"+test+"名: "+key[0]+","+key[1]+"</h4>";
+      //数字转中文
+      li.innerHTML = "<h4>第"+test.toLocaleString('zh-Hans-CN-u-nu-hanidec')+"名: "+key[0]+","+key[1]+"</h4>";
       ul.appendChild(li); 
     }     
   }
