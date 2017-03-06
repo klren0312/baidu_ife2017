@@ -11,5 +11,14 @@
 `ul.appendChild(li)`
 
 4.多维数组
-test[数组项目][数组项目内数值]
+>test[数组项目][数组项目内数值]
+
+5.排序函数sort
+>单独使用 arr.sort()
+如果不行的话，加一个排序函数
+```
+function sortArray(a,b){
+	return b[1] - a[1];
+}
+```
 
