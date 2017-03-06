@@ -33,14 +33,19 @@ var aqiData = [
   */
   var ul = document.getElementById("aqi-list");
 
- 
-  var test =4; 
-  
+  var test =0; 
+  var arr = [];
 
-  for (var key of aqiData) {
+  /*排序函数*/
+  function sortArray(a,b){
+    return b[1] - a[1];
+  }
+  arr = aqiData.sort(sortArray);
+
+  for (var key of arr) {
     var li = document.createElement("li");
     if (key[1]>60) {
-      test--;
+      test++;
       li.innerHTML = "<h4>第"+test+"名: "+key[0]+","+key[1]+"</h4>";
       ul.appendChild(li); 
     }     
