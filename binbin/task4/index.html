@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task4</title>
+	<style>
+		.n{
+			width: 30px;
+			height: 30px;
+			padding: 20px;
+			background: blue;
+			float: left;
+			margin: 5px;
+			text-align: center;
+			border-radius: 10px 10px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="num" name="num">
+	<button id="leftIn">左侧入</button>
+	<button id="rightIn">右侧入</button>
+	<button id="leftOut">左侧出</button>
+	<button id="rightOut">右侧出</button>
+	<div id="kuang">
+		
+	</div>
+</body>
+<script>
+	
+	//获取数字
+	var number = document.getElementById('num').value;
+
+	//获取按钮
+	var leftIn = document.getElementById('leftIn');
+	var rightIn = document.getElementById('rightIn');
+	var leftOut = document.getElementById('leftOut');
+	var rightOut = document.getElementById('rightOut');
+	//框获取
+	var kuang =document.getElementById('kuang');
+
+	//左加入函数
+	function leftAddItem(){
+		var number = document.getElementById('num').value;
+		var div = document.createElement("div");
+		div.innerHTML="<div class=\"n\">"+number + "</div>";
+		kuang.insertBefore(div,kuang.firstChild);
+	}
+
+	//右加入函数
+	function rightAddItem(){
+		var number = document.getElementById('num').value;
+		var div = document.createElement("div");
+		div.innerHTML = "<div class=\"n\">"+number+"</div>";
+		kuang.appendChild(div);
+	}
+
+	//左移除函数
+	function leftRemoveItem(){
+		kuang.removeChild(kuang.firstChild);
+	}
+
+	//右移除函数
+	function rightRemoveItem(){
+		kuang.removeChild(kuang.lastChild);
+	}
+
+	//按钮事件
+	//左入
+	leftIn.onclick=function(){
+		leftAddItem(number);
+	}
+	//右入
+	rightIn.onclick=function(){
+		rightAddItem(number);
+	}
+	//左出
+	leftOut.onclick = function(){
+		leftRemoveItem();
+	}
+	//右出
+	rightOut.onclick = function(){
+		rightRemoveItem();
+	}
+</script>
+</html>
