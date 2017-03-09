@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task4</title>
+	<style>
+		.n{
+			width: 30px;
+			padding: 20px;
+			background: blue;
+			float: left;
+			margin: 5px;
+			text-align: center;
+			border-radius: 10px 10px;
+		}
+	</style>
+</head>
+<body>
+	<input type="number" id="num" name="num">
+	<button id="leftIn">左侧入</button>
+ 
+	<button id="leftOut">左侧出</button>
+ 
+ 	<button id="sortNum">排序</button>
+	<div id="kuang">
+		
+	</div>
+</body>
+<script>
+	
+	//获取数字
+	var number = document.getElementById('num').value;
+
+	//获取按钮
+	var leftIn = document.getElementById('leftIn');
+ 
+	var leftOut = document.getElementById('leftOut');
+ 
+ 	var sortNum = document.getElementById('sortNum');
+	//框获取
+	var kuang =document.getElementById('kuang');
+
+	//判断超数函数
+	function overNumber(){
+		if((kuang.childNodes.length-1)>60){
+			alert("不能超过六十个");
+		}
+	}
+
+	//排序函数
+	function sortNumfunc(){
+		var arr = [];
+		for (let i = 0; i < kuang.childNodes.length-1; i++) {
+			arr[i] = parseInt(kuang.childNodes[i].innerText);
+		}
+		for(let i = 0;i<arr.length;i++){
+			for(let j = 0;j<arr.length-i-1;j++){
+				if (arr[j]<arr[j+1]) {
+					let temp = arr[j+1];
+					arr[j+1] = arr[j];
+					arr[i] = temp;
+				}
+			}
+		}
+
+		console.log(arr);
+
+		kuang.innerHTML = "";
+
+		for (let i = 0; i < arr.length; i++) {
+			var div = document.createElement("div");
+			//通过设置的数字设置高度
+			div.innerHTML="<div class=\"n\" style=\"height:"+arr[i]+"px;\">"+arr[i] + "</div>";
+			kuang.insertBefore(div,kuang.firstChild);
+		}		
+
+	}
+	
+ 
+
+	//加入函数
+	function leftAddItem(){
+		var number = document.getElementById('num').value;
+		var div = document.createElement("div");
+		//通过设置的数字设置高度
+		div.innerHTML="<div class=\"n\" style=\"height:"+number+"px;\">"+number + "</div>";
+		kuang.insertBefore(div,kuang.firstChild);
+		overNumber();
+	}
+
+ 
+
+	//移除函数
+	function leftRemoveItem(){
+		kuang.removeChild(kuang.firstChild);
+	}
+
+	 
+
+	//按钮事件
+ 
+	leftIn.onclick=function(){
+		leftAddItem(number);
+	}
+ 
+ 
+	leftOut.onclick = function(){
+		leftRemoveItem();
+	}
+
+	sortNum.onclick = function(){
+		sortNumfunc();
+	}
+ 
+</script>
+</html>
+</body>
+</html>
