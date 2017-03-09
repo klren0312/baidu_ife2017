@@ -77,7 +77,7 @@
 		for (let i = 0; i < arr.length; i++) {
 			var div = document.createElement("div");
 			//通过设置的数字设置高度
-			div.innerHTML="<div class=\"n\" style=\"height:"+arr[i]+"px;\">"+arr[i] + "</div>";
+			div.innerHTML="<div class=\"n\" style=\"height:"+arr[i]+"px;margin-top=(100-"+ arr[i] +")*2+'px';\">"+arr[i] + "</div>";
 			kuang.insertBefore(div,kuang.firstChild);
 		}		
 
@@ -88,6 +88,7 @@
 	//加入函数
 	function leftAddItem(){
 		var number = document.getElementById('num').value;
+
 		var div = document.createElement("div");
 		//通过设置的数字设置高度
 		div.innerHTML="<div class=\"n\" style=\"height:"+number+"px;\">"+number + "</div>";
@@ -107,7 +108,12 @@
 	//按钮事件
  
 	leftIn.onclick=function(){
-		leftAddItem(number);
+		var number = document.getElementById('num').value;
+		if (number<10||number>100) {
+			alert("请输入10-100之间的数");
+		}else{
+			leftAddItem(number);
+		}
 	}
  
  
