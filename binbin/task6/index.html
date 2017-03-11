@@ -51,7 +51,7 @@
 		let arr = [];
 		for (let i = 0; i < kuang.childNodes.length-1; i++) {
 			arr[i] = kuang.childNodes[i].innerText;
-			if (arr[i] === text) {
+			if (arr[i].search(text) != -1) {
 				kuang.childNodes[i].style.color="red";
 				console.log("ok");
 			}
