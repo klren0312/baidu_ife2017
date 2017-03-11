@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task6</title>
+	<style>
+		.n{
+			width: 30px;
+			height: 30px;
+			padding: 20px;
+			background: blue;
+			float: left;
+			margin: 5px;
+			text-align: center;
+			border-radius: 10px 10px;
+		}
+	</style>
+</head>
+<body>
+	<textarea id="num" name="num"></textarea><br>
+	<button id="leftIn">左侧入</button>
+	<button id="rightIn">右侧入</button>
+	<button id="leftOut">左侧出</button>
+	<button id="rightOut">右侧出</button>
+	<input type="text" placeholder="请输入查询字段" id="searchtext">
+	<button id="search">查询</button>
+	<div id="kuang">
+		
+	</div>
+</body>
+<script>
+	
+	//获取数字
+	var number = document.getElementById('num').value;
+	var arr = number.split(" ");
+
+	//获取查询字段
+	var searchtext = document.getElementById('searchtext').value;
+	var searchbtn = document.getElementById('search');
+
+	//获取按钮
+	var leftIn = document.getElementById('leftIn');
+	var rightIn = document.getElementById('rightIn');
+	var leftOut = document.getElementById('leftOut');
+	var rightOut = document.getElementById('rightOut');
+	//显示框获取
+	var kuang =document.getElementById('kuang');
+
+	//查询标记
+	function searchText(text){
+		let arr = [];
+		for (let i = 0; i < kuang.childNodes.length-1; i++) {
+			arr[i] = kuang.childNodes[i].innerText;
+			if (arr[i] === text) {
+				kuang.childNodes[i].style.color="red";
+				console.log("ok");
+			}
+		}
+	}
+
+	//左加入函数
+	function leftAddItem(arr){ 
+		var div = document.createElement("div");
+		div.innerHTML="<div class=\"n\">"+arr+ "</div>";
+		kuang.insertBefore(div,kuang.firstChild);
+	}
+
+	//右加入函数
+	function rightAddItem(arr){
+		var div = document.createElement("div");
+		div.innerHTML = "<div class=\"n\">"+arr+"</div>";
+		kuang.appendChild(div);
+	}
+
+	//左移除函数
+	function leftRemoveItem(){
+		kuang.removeChild(kuang.firstChild);
+	}
+
+	//右移除函数
+	function rightRemoveItem(){
+		kuang.removeChild(kuang.lastChild);
+	}
+
+	//按钮事件
+	//查询
+	searchbtn.onclick = function(){
+		searchText(searchtext);
+	}
+	//左入
+	leftIn.onclick=function(){
+		for (var i = 0; i < arr.length; i++) {
+			leftAddItem(arr[i]);	
+		}
+	}
+	//右入
+	rightIn.onclick=function(){
+		for (var i = 0; i < arr.length; i++) {
+			rightAddItem(arr[i]);	
+		}
+	}
+	//左出
+	leftOut.onclick = function(){
+		leftRemoveItem();
+	}
+	//右出
+	rightOut.onclick = function(){
+		rightRemoveItem();
+	}
+</script>
+</html>
