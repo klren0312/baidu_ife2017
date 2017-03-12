@@ -14,6 +14,9 @@
   * [task4-20170308](#task4)
   * [task5-20170309](#task5)
   * [task5-20170311](#task6)
+* [耀耀学院](#耀耀学院)
+  * [task1-20170312](#task1)
+
 ***
 
 
@@ -334,3 +337,20 @@ function sortNumfunc(){
 3.javascript search函数
 >search() 方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串。
 string.search(string2);若返回-1则没有匹配值。
+
+
+##耀耀学院
+
+###task1
+>学习了表单验证相关写法
+
+1.判断字符长度
+>使用charCodeAt()
+charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。Unicode是除了中文之外的字符。
+通过循环判断，若是中文则标识符加二，其他标识符加一。
+
+2.表单按钮按了之后，验证一闪而过
+>```
+<button   type="submit" onclick="return btnClick()">验证</button>
+```
+使用`onclick="return btnClick()"`若`btnClick()`函数返回false，则提交按钮无效，不会提交并刷新页面，这样验证信息就能显示了。
