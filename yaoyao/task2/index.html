@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task1</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<main>
+		<form action="" id="myform">
+			<div class="kuai">
+				<label for="b1">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label>
+				<input type="text" id="b1" name="b1" onfocus="nameFocus();" onblur="nameCheck();">
+				<span id="tips1">
+					
+				</span>
+				<br>
+
+				<label for="b2">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+				<input type="password" id="b2" name="b2" onfocus="pwdFocus();" onblur="pwdCheck();">
+				<span id="tips2">
+					 
+				</span>
+				<br>
+
+				<label for="b3">再次确认</label>
+				<input type="password" id="b3" name="b3" onfocus="repwdFocus();" onblur="repwdCheck();">
+				<span id="tips3">
+					 
+				</span>
+				<br>
+
+				<label for="b4">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</label>
+				<input type="email" id="b4" name="b4" onfocus="emailFocus();" onblur="emailCheck();">
+				<span id="tips4">
+					 
+				</span>
+				<br>
+
+				<label for="b5">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机</label>
+				<input type="number" id="b5" name="b5" onfocus="phoneFocus();" onblur="phoneCheck();">
+				<span id="tips5">
+					 
+				</span>
+				<br>
+				<button id="btn" type="submit" onclick="return btnClick()">验证</button>	
+				<br>
+				
+			</div>
+		</form>
+	</main>
+</body>
+<script src="check.js"  charset="UTF-8"></script>
+</html>
