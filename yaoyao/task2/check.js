@@ -4,6 +4,8 @@ var tips3 = document.getElementById('tips3');
 var tips4 = document.getElementById('tips4');
 var tips5 = document.getElementById('tips5');
 
+var errorflag = true;//错误标志位
+
 //获取焦点函数
 function nameFocus() {
 	tips1.innerHTML = "必填，为4~16位字符";
@@ -52,17 +54,23 @@ function nameCheck() {
 		kuang.style.border="5px solid red";
 		tips1.style.color = "red";
 		tips1.innerHTML = "姓名不能为空"
+		errorflag = false;
+
 		return false;
 	}
 	else if(len<4||len>16){
 		kuang.style.border="5px solid red";
 		tips1.style.color = "red";
 		tips1.innerHTML = "字符长度应该是4-16个字符！"
+		errorflag = false;
+
 		return false;		
 	}else{
 		tips1.innerHTML = "姓名格式正确！"
 		kuang.style.border="5px solid green";
 		tips1.style.color = "green";
+		errorflag = true;
+
 		return false;
 	}
 }
@@ -74,11 +82,15 @@ function pwdCheck() {
     	kuang.style.border="5px solid red";
     	tips2.style.color = "red";
     	tips2.innerHTML = "密码不能为空"
+    	errorflag = false;
+
     	return false;
     }else{
 		tips2.innerHTML = "密码可用！"
 		kuang.style.border="5px solid green";
 		tips2.style.color = "green";
+		errorflag = true;
+
 		return false;
 	}
 }
@@ -94,17 +106,23 @@ function repwdCheck() {
     	rekuang.style.border="5px solid red";
     	tips3.style.color = "red";
     	tips3.innerHTML = "请重新输入密码,不能为空"
+    	errorflag = false;
+
     	return false;
     }
     else if(str === restr){
 		tips3.innerHTML = "密码一致！"
 		rekuang.style.border="5px solid green";
 		tips3.style.color = "green";
+		errorflag = true;
+
 		return false;
 	}else{
 		rekuang.style.border="5px solid red";
     	tips3.style.color = "red";
     	tips3.innerHTML = "密码输入不一致"
+    	errorflag = false;
+
     	return false;
 	}
 }
@@ -116,17 +134,23 @@ function emailCheck() {
     	kuang.style.border="5px solid red";
     	tips4.style.color = "red";
     	tips4.innerHTML = "请输入邮箱,不能为空"
+    	errorflag = false;
+
     	return false;
     }
     else if(str.indexOf("@",0) == -1){
     	kuang.style.border="5px solid red";
     	tips4.style.color = "red";
     	tips4.innerHTML = "邮箱格式错误！"
+    	errorflag = false;
+
     	return false;
     }else{
     	tips4.innerHTML = "邮箱可用！"
     	kuang.style.border="5px solid green";
     	tips4.style.color = "green";
+    	errorflag = true;
+
     	return false;
     }	
 }
@@ -138,17 +162,23 @@ function phoneCheck() {
     	kuang.style.border="5px solid red";
     	tips5.style.color = "red";
     	tips5.innerHTML = "请输入手机号码,不能为空"
+    	errorflag = false;
+
     	return false;
     }
     else if(str.length != 11){
     	kuang.style.border="5px solid red";
     	tips5.style.color = "red";
     	tips5.innerHTML = "手机号码格式错误！"
+    	errorflag = false;
+
     	return false;
     }else{
     	tips5.innerHTML = "手机号码可用！"
     	kuang.style.border="5px solid green";
     	tips5.style.color = "green";
+    	errorflag = true;
+
     	return false;
     }		
 }
@@ -162,6 +192,9 @@ function btnClick(){
 
 	if (kuang1.value == ""||kuang2.value == ""||kuang3.value == ""||kuang4.value == ""||kuang5.value == "") {
 		alert("表单不能为空！");
+	}
+	if(errorflag == false){
+		alert("表单格式错误！");
 	}
 
 }
