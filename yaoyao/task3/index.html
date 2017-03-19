@@ -1,0 +1,41 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task3</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<form action="">
+		<input type="radio" name="stu" id="yesstu"   onfocus="showIn()">在校生
+		<input type="radio" name="stu" id="nostu"   onfocus="showOut()">非在校生
+
+		<div id="yesSelect">
+			<label for="city">学校
+				<select name="city" id="city" onchange="cityChange(this.value);">
+					<option value="1" selected="selected">城市</option>
+					<option value="2">北京</option>
+					<option value="3">滁州</option>
+				</select>
+			</label>
+			 
+			<select name="beijingsch" id="beijingsch">
+				<option value="1">北京大学</option>
+				<option value="2">清华大学</option>
+			</select>
+
+ 			<select name="chzusch" id="chzusch">
+ 				<option value="1">滁州学院</option>
+ 			</select>
+		</div>
+
+		<div id="noSelect">
+			<label for="jobs">就业单位
+				<input type="text" name="jobs" id="jobs">
+			</label>
+		</div>
+	</form>
+</body>
+<script src="input.js"></script>
+</html>
