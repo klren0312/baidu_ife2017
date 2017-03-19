@@ -17,6 +17,7 @@
 * [耀耀学院](#耀耀学院)
   * [task1-20170312](#task1)
   * [task2-20170315](#task2)
+  * [task2-20170319](#task3)
 
 ***
 
@@ -379,3 +380,16 @@ else if(str.indexOf("@",0) == -1){
 
 3.增加错误标志，当表单有错误时，提交时会弹窗
 `var errorflag = true;//错误标志位`
+
+
+###task3
+>学习了onfocus 和 onchange事件
+
+1.onfocus事件，onchange事件
+>1.onfocus事件当聚焦到标签时触发,我用在单选框选择时触发
+2.onchange事件当内容改变时触发，我用在select内容改变时触发
+
+2.css 的 display
+>1.display：none；不显示
+2.display:block; 块显示，会换行
+3.display:inline-block;同行显示
