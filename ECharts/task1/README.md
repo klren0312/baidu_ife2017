@@ -1,4 +1,4 @@
-#task1
+# task1
 >学习了ECharts的基本配置
 
 1.title
