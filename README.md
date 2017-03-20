@@ -31,10 +31,10 @@
 
  - 1.学习了table的写法
  - 2.学习了input一些类型的写法，尤其是单选框的写法
-	 ```
+```
 	 <input type="radio" name="sex" id="man">男
 	 <input type="radio" name="sex" id="woman">女
-	 ```
+```
  - 3.学习了要使用HTML5语义化标签
 
 ###task2
@@ -43,12 +43,11 @@
 1. 学习了a标签的相关样式
 
 ```
-/*a去掉下划线*/
+/\*a去掉下划线\*/
  a{
  	text-decoration:none;
  }
-
- /*a各种形态显示的颜色*/
+ /\*a各种形态显示的颜色\*/
  a:link{color:white;}
  a:active{color:blue;}
  a:visited{color:yellow;}
@@ -281,7 +280,6 @@ function render(data) {
       alert("不能超过六十个");
     }
   }
-
 ```
 
 2.排序函数
